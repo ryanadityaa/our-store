@@ -491,7 +491,7 @@
     .container-1 .bg-black {
         background-color: black;
         width: 100%;
-        height: 98.5vh;
+        height: 114vh;
         z-index: 4;
         margin-top: 11rem;
         display: flex;
@@ -536,7 +536,7 @@
 
     .container-1 .bg-black .content .text {
         width: 80%;
-        padding-top: 21.5em;
+        padding-top: 20.8em;
         padding-bottom: 5rem;
         position: relative;
     }
