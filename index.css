@@ -1,0 +1,694 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'geometos';
+    src: url(font/Geometos.ttf);
+}
+.borderActive {
+    border:5px solid black;
+}
+.navbar{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: rgba(17, 12, 46, 0.10) 0px 5px 20px 0px;
+    position: fixed;
+}
+.navbar .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    width: 100%;
+}
+.navbar .content #search {
+    display: none;
+}
+.navbar .content .menu-btn {
+    display: none;
+}
+.navbar .content .logo  h3 {
+    color: black;
+    font-family: 'geometos';
+    padding-top: 7px;
+    padding-bottom: 3px;
+
+}
+.navbar .content .logo .underline:nth-child(1) {
+    width: 90px;
+    height: 4px;
+    background-color: black;
+    float: right;
+    transform: rotateY(-180deg);
+}
+.navbar .content .logo .underline:nth-child(3) {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    float: left;
+}
+.navbar .content .menu-list {
+    display: flex;
+    flex-grow: 0.9;
+}
+.navbar .content .menu-list li {
+    list-style: none;
+    margin: 0 10px;
+}
+.navbar .content .menu-list li a {
+    text-decoration: none;
+    color: #787878;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+
+}
+.navbar .content .menu-list li a:hover {
+    color: black;
+}
+.navbar .content .menu-list .account {
+    display: none;
+}
+.navbar .content .menu-list .icon-cancel-btn i {
+    display: none;
+}
+
+.navbar .content .icon-there{
+    display: flex;
+    align-items: center;
+}
+.navbar .content .icon-there li {
+    list-style: none;
+    margin: 0 4px;
+}
+.navbar .content .icon-there li a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar .content .icon-there i {
+    margin: 0 12px;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+}
+
+
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-1 .text {
+    padding-left: 40px;
+    width: 35%;
+}
+.container-1 .text h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 68px;
+}
+
+.container-1 .text .btn {
+    position: absolute;
+    margin-top: 2rem;
+    z-index: 2;
+}
+.container-1 .text .btn a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 15px 30px;
+    box-shadow: rgba(17, 12, 46, 0.50) 0px 16px 30px 0px;
+}
+.container-1 .text .textForward {
+    position: absolute;
+    padding-top: 4rem;
+}
+.container-1 .text .textForward h1 {
+    font-size: 300px;
+    color: rgb(233, 233, 233);
+    letter-spacing: 10px;
+}
+
+
+.container-1 .bg-black {
+    background-color: black;
+    width: 600px;
+    height: 110vh;
+    z-index: 4;
+    
+}
+.container-1 .bg-black .content {
+    margin-top: 10rem;
+    display :none;
+    align-items: center;
+    position: absolute;
+}
+.container-1 .bg-black .content.active {
+    display: flex;
+}
+
+.container-1 .bg-black .content .image {
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin-left: -10rem;
+    object-fit: cover;
+    z-index: 3;
+}
+.container-1 .bg-black .image img {
+    object-fit: cover;
+    width: 100%;
+    animation: slide 1.2s ease;
+}
+@keyframes slide {
+    0% {
+        transform: scale(1.6);
+    }
+    100% {
+        transform : scale(1);
+    }
+}
+
+.container-1 .bg-black .content .text {
+    /*background-color: red;*/
+    width: 50%;
+}
+.container-1 .bg-black .content .text .title {
+    display: flex;
+    align-items: center;
+    animation : slideText 1s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+@keyframes slideText {
+    0% {
+        opacity :0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform : translateX(0px);
+    }
+}
+
+.container-1 .bg-black .content .text .title .underline {
+    background-color: white;
+    width: 200px;
+    height: 4px;
+}
+.container-1 .bg-black .content .text .title h2 {
+    padding-left: 10px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.container-1 .bg-black .content .text .desc {
+    /*background-color: red;*/
+}
+.container-1 .bg-black .content .text .desc p {
+    color: rgb(200, 200, 200);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    line-height: 27px;
+    animation : slideDesc 0.7s ease forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+}
+@keyframes slideDesc{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* btn controler */
+
+.container-1 .bg-black .button {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.container-1 .bg-black .button i {
+    background-color: white;
+    padding: 5px 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.container-1 .bg-black .button .nextBtn , .prevBtn {
+    margin: 0 10px;
+}
+
+
+/* container 2 */
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 70px;
+    padding-top: 8rem;
+}
+.container2 .container-image {
+    /*background-color: red;*/
+    width: 450px;
+    height: 400px;
+    position: relative;
+}
+.container2 .container-image .text-small {
+    position: absolute;
+    left: -10px;  
+    bottom: 45px; 
+}
+.container2 .container-image p {
+    margin-top: 3rem;
+    transform: rotate(-90deg);
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container2 .container-image .img {
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+    margin:auto;
+    z-index: 2;
+    position: relative;
+}
+.container2 .container-image .img img {
+    object-fit: cover;
+    width: 100%;
+}
+.container2 .container-image .overlay-img {
+    background-color: black;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: -17rem 0px 0rem 12rem;
+    right: 0;
+}
+
+.container2 .container-text {
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+   /* background-color: red; */
+}
+.container2 .container-text .title {
+    width: 70%;
+}
+.container2 .container-text h1 {
+    font-size: 60px;
+    letter-spacing: 1.5px;
+    line-height: 1.2em;
+}
+.container2 .container-text .description {
+    margin-top: 2em;
+    width: 90%;
+}
+.container2 .container-text .description p {
+    color: #252525;
+    font-size: 18px;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width : 576px) {
+    .navbar{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 80px;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        box-shadow: rgba(17, 12, 46, 0.10) 0px 5px 20px 0px;
+        position: fixed;
+    }
+ 
+    .navbar .content {
+        padding: 0 30px;
+    }
+    .navbar .content .logo  {
+        position: relative;
+    }
+    .navbar .content .logo .underline:nth-child(1) {
+        width: 40px;
+        height: 4px;
+        background-color: black;
+        float: right;
+        transform: rotateY(-180deg);
+    }
+    .navbar .content .logo .underline:nth-child(3) {
+        width: 30px;
+        height: 4px;
+        background-color: black;
+        float: left;
+    }
+    .navbar .content .logo  h3 {
+        color: black;
+        font-family: 'geometos';
+        padding-top: 7px;
+        padding-bottom: 3px;
+        text-align: center;
+        font-size: 17px;
+    }
+    .navbar .content .menu-btn {
+        display: block;
+        font-size: 1.4em;
+        cursor: pointer;
+    }
+    .navbar .content .menu-list {
+        background-color: black;
+        width: 82%;
+        height: 110vh;
+        top: 0;
+        left: -100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        transition: .5s;
+    }
+    .navbar .content .menu-list li {
+        margin: 10px auto;
+    }
+    .navbar .content .menu-list li a {
+        color: rgb(212, 212, 212);
+        font-size: 18px;
+    }
+    .navbar .content .menu-list li a:hover {
+        color: white;
+    }
+    .navbar .content .menu-list .icon-cancel-btn i{
+        color: white;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        top: 18px;
+        right: 6px;
+        font-size: 1.4em;
+        position: absolute;
+        cursor: pointer;
+    }
+    .navbar .content .menu-list .account {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 1.5rem;
+    }
+    .navbar .content .menu-list .account .signIn{
+        color: black;
+        text-decoration: none;
+        background-color: white;
+        padding: 8px 50px;
+    }
+    .navbar .content .menu-list .account .signUp {
+        color: rgb(212, 212, 212);
+        text-decoration-color: white;
+    }
+    .navbar .content .menu-list .account p {
+        color: rgb(182, 182, 182);
+        font-size: 15px;
+        padding-top: 0.8rem;
+    }
+    .navbar .content .menu-list.active {
+        left: 0;
+    }
+
+    .navbar .content .icon-there {
+        display: none;
+    }
+    .navbar .content .icon-there i {
+        margin: 0 5px;
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        flex-grow: 0.4;
+    }
+    .navbar .content #search {
+    display: block;
+    }
+
+    /*container banner */
+    .container-1 {
+        flex-direction: column;
+        margin: auto 13px;
+    }
+
+    .container-1 .text {
+        padding-top: 10rem;
+        width: 95%;
+        padding-left: 0px;
+        text-align: left;
+    }
+    .container-1 .text h1 {
+        font-family: 'Times New Roman', Times, serif;
+        position: relative;
+        font-size: 2.6em;
+    }
+    .container-1 .text .btn {
+        position: absolute;
+        margin-top: 2rem;
+        z-index: 2;
+    }
+    .container-1 .text .btn a {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        padding: 13px 20px;
+        box-shadow: rgba(17, 12, 46, 0.50) 0px 16px 30px 0px;
+    }
+    .container-1 .text .textForward {
+        position: absolute;
+        padding-top: 4.5rem;
+        display: none;
+    }
+    .container-1 .text .textForward h1 {
+        font-size: 130px;
+        color: rgb(240, 240, 240);
+        letter-spacing: 5px;
+      
+    }
+
+    
+    .container-1 .bg-black {
+        background-color: black;
+        width: 100%;
+        height: 98.5vh;
+        z-index: 4;
+        margin-top: 11rem;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .container-1 .bg-black .content {
+        display :none;
+        position: absolute;
+        margin-top: -2rem;
+        padding-bottom: 0;
+
+    }
+    .container-1 .bg-black .content.active {
+        display: flex;
+        flex-direction: column;
+        /*background-color: green;*/
+        width: 100%;
+        top: 0;
+    }
+
+    .container-1 .bg-black .content .image {
+        width: 75%;
+        height: 300px;
+        overflow: hidden;
+        position: absolute;
+        margin-left: 0px;
+    }
+    .container-1 .bg-black .image img {
+        object-fit: cover;
+        width: 100%;
+        animation: slide 1.2s ease;
+    }
+    @keyframes slide {
+        0% {
+            transform: scale(1.6);
+        }
+        100% {
+            transform : scale(1);
+        }
+    }
+
+    .container-1 .bg-black .content .text {
+        width: 80%;
+        padding-top: 21.5em;
+        padding-bottom: 5rem;
+        position: relative;
+    }
+    .container-1 .bg-black .content .text .title {
+        display: flex;
+        align-items: center;
+        animation : slideText 1s ease forwards;
+        animation-delay: 0.6s;
+        opacity: 0;
+    }
+@keyframes slideText {
+    0% {
+        opacity :0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform : translateX(0px);
+    }
+}
+
+    .container-1 .bg-black .content .text .title .underline {
+        background-color: white;
+        width: 140px;
+        height: 4px;
+    }
+    .container-1 .bg-black .content .text .title h2 {
+        padding-left: 10px;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+    }
+
+    .container-1 .bg-black .content .text .desc {
+        /*background-color: red;*/
+    }
+    .container-1 .bg-black .content .text .desc p {
+
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        line-height: 27px;
+        animation : slideDesc 0.7s ease forwards;
+        animation-delay: 1.1s;
+        opacity: 0;
+        
+    }
+    @keyframes slideDesc{
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    /* btn controler */
+
+    .container-1 .bg-black .button {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        z-index: 4;
+    }
+    .container-1 .bg-black .button i {
+        background-color: white;
+        padding: 5px 15px;
+        font-size: 22.5px;
+        cursor: pointer;
+    }
+    .container-1 .bg-black .button .nextBtn , .prevBtn {
+        margin: 3px;
+    }
+
+    /*container 2 */
+
+    .container2 {
+        flex-direction: column;
+        padding-top: 5rem;
+        margin: auto 13px; 
+    }
+    .container2 .container-image {
+        /*background-color: red;*/
+        width: 100%;
+        height: 400px;
+     
+    }
+    .container2 .container-image .text-small {
+        position: absolute;
+        left: -10px;  
+        bottom: 45px; 
+    }
+    .container2 .container-image p {
+        margin-top: 3rem;
+        transform: rotate(-90deg);
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .container2 .container-image .img {
+        width: 100%;
+        height: 310px;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+       
+    }
+    .container2 .container-image .img img {
+        object-fit: cover;
+        width: 95%;
+        height: 106%;
+        position: relative;
+        z-index: 2;
+    }
+    .container2 .container-image .overlay-img {
+        background-color: black;
+        position: absolute;
+        width: 80%;
+        height: 200px;
+        left: -15rem;
+        bottom: 3em;
+        
+    }
+    
+    .container2 .container-text {
+        display: flex;
+        flex: 0;
+        flex-direction: column;
+        /*background-color: red; */
+        left: 0;
+        margin-top: 1em;
+       
+    }
+    .container2 .container-text .title {
+        width: 100%;
+    }
+    .container2 .container-text h1 {
+        font-size: 2.3em;
+        letter-spacing: 1.5px;
+        line-height: 1.2em;
+    }
+    .container2 .container-text .description {
+        margin-top: 2em;
+        width: 90%;
+    }
+    .container2 .container-text .description p {
+        color: #575757;
+        font-size: 17px;
+        line-height: 1.5rem;
+        font-weight: 500;
+    }
+
+
+}
+
