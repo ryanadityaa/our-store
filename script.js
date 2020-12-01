@@ -51,19 +51,22 @@ link.forEach(function(link){
 
 /* slider imager banner */
 const slides = document.querySelectorAll('.content');
-const prev  = document.querySelector('#prevBtn');
-const next  = document.querySelector('#nextBtn');
+const prev  = document.querySelectorAll('#prevBtn');
+const next  = document.querySelectorAll('#nextBtn');
 let index = 1 ;
 
-
-
-prev.addEventListener('click', function() {
+prev.forEach(function(a){
+    a.addEventListener('click', function() {
     prevSlide();
+    })
 })
 
-next.addEventListener('click', function() {
-    nextSlide();
+next.forEach(function(a){
+    a.addEventListener('click', function() {
+   nextSlide();
+    })
 })
+
 
 function prevSlide() {
     if (index == 1) {
@@ -105,5 +108,5 @@ function autoPlay () {
     nextSlide();
 
 }
-let time = setInterval(autoPlay,6500);
+let time = setInterval(autoPlay,8000);
 

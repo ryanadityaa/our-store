@@ -6,6 +6,11 @@
     font-family: 'geometos';
     src: url(font/Geometos.ttf);
 }
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
 .borderActive {
     border:5px solid black;
 }
@@ -24,7 +29,7 @@
 .navbar .content {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 45px;
     align-items: center;
     width: 100%;
 }
@@ -106,7 +111,7 @@
     align-items: center;
 }
 .container-1 .text {
-    padding-left: 40px;
+    padding-left: 48px;
     width: 35%;
 }
 .container-1 .text h1 {
@@ -125,7 +130,7 @@
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-    padding: 15px 30px;
+    padding: 14px 39px;
     box-shadow: rgba(17, 12, 46, 0.50) 0px 16px 30px 0px;
 }
 .container-1 .text .textForward {
@@ -219,7 +224,7 @@
 .container-1 .bg-black .content .text .desc p {
     color: rgb(200, 200, 200);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 27px;
     animation : slideDesc 0.7s ease forwards;
     animation-delay: 1.1s;
@@ -237,20 +242,20 @@
 
 /* btn controler */
 
-.container-1 .bg-black .button {
+.container-1 .bg-black .content .button {
     display: flex;
     align-items: center;
     position: absolute;
     right: 20px;
     bottom: 20px;
 }
-.container-1 .bg-black .button i {
+.container-1 .bg-black .content  .button i {
     background-color: white;
     padding: 5px 20px;
     font-size: 30px;
     cursor: pointer;
 }
-.container-1 .bg-black .button .nextBtn , .prevBtn {
+.container-1 .bg-black .content  .button .nextBtn , .prevBtn {
     margin: 0 10px;
 }
 
@@ -291,14 +296,17 @@
 .container2 .container-image .img img {
     object-fit: cover;
     width: 100%;
+    z-index: 2;
+    position: relative;
+    margin-left: 3em;
+    margin-top: 2em;
 }
 .container2 .container-image .overlay-img {
     background-color: black;
-    position: relative;
+    position: absolute;
     width: 300px;
     height: 300px;
-    margin: -17rem 0px 0rem 12rem;
-    right: 0;
+    top: 0;
 }
 
 .container2 .container-text {
@@ -316,14 +324,177 @@
     line-height: 1.2em;
 }
 .container2 .container-text .description {
-    margin-top: 2em;
+    margin-top: 1.7em;
     width: 90%;
 }
 .container2 .container-text .description p {
     color: #252525;
-    font-size: 18px;
-    line-height: 1.5rem;
+    font-size: 19px;
+    line-height: 1.7rem;
     font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.container2 .container-text .btn {
+    padding-top: 2.5em;
+}
+.container2 .container-text .btn a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 14px 39px;
+    box-shadow: rgba(17, 12, 46, 0.50) 0px 16px 30px 0px;
+}
+
+
+.container3 h1 {
+    text-align:center;
+    font-size:50px;
+    margin-top:2.5em;
+}
+
+.container4 {
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin: auto;
+    margin-top: 1.7em;
+}
+.container4 .box {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 17px 20px;
+    position: relative;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 16px 30px 0px;
+
+}
+.container4 .box .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.container4 .box .img  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease;
+}
+.container4 .box .detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    opacity: 0;
+    transition: .3s;
+}
+.container4 .box .detail .title {
+    text-align: center;
+    
+}
+.container4 .box .detail p {
+    color: white;
+    font-size: 34px;
+    text-align: center;
+    padding-top: 18px;
+}
+.container4 .box .detail span {
+    color:rgb(233, 233, 233);
+    font-size: 20px;
+}
+.container4 .box .detail .btn {
+    position: absolute;
+    bottom: 15px;
+    display: inline-block;
+    width: 80%;
+    left: 30px;
+}
+.container4 .box .detail a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 55px;
+    font-weight: 500;
+    border-radius :3px;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   
+}
+.container4 .box:hover .img  img {
+    transform: scale(1.1,1.1);
+ 
+} 
+.container4 .box .detail:hover {
+    opacity: 1;
+    visibility: visible;
+} 
+
+/* container 5 */
+.container5 {
+    background-color: black;
+    margin-top: 6em;
+}
+.container5 .title {
+    text-align: center;
+    color:white;
+    padding-top: 1.4em;
+}
+.container5 .title h1 {
+    font-size: 39px;
+}
+.carousel {
+    width: 95%;
+    margin: 0 auto;
+
+}
+.carousel .box {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 5em 2em 5em;
+    margin: 0 3px;
+}
+
+.carousel .box .img{
+  width: 280px;
+  height: 320px;
+  margin-right: 10px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+.carousel .box .img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.carousel .box .container-desc {
+    /*background-color: red;*/
+    font-family: 'Poppins', sans-serif;
+}
+.carousel .box .container-desc .title {
+    text-align: left;
+}
+.carousel .box .container-desc .title h2 {
+    font-size: 24px;
+}
+.carousel .box .container-desc .desc p {
+    color:rgb(195, 195, 195);
+}
+.carousel .box .container-desc .desc .price p {
+    color : white;
+    font-size: 20px;
+    padding-top: 0.3em;
+}
+ol.flickity-page-dots {
+    display: none;
 }
 
 @media screen and (max-width : 576px) {
@@ -448,6 +619,7 @@
     .container-1 {
         flex-direction: column;
         margin: auto 13px;
+        position: absolute;
     }
 
     .container-1 .text {
@@ -455,6 +627,7 @@
         width: 95%;
         padding-left: 0px;
         text-align: left;
+
     }
     .container-1 .text h1 {
         font-family: 'Times New Roman', Times, serif;
@@ -472,7 +645,7 @@
         text-decoration: none;
         font-family: 'Times New Roman', Times, serif;
         font-size: 18px;
-        padding: 13px 20px;
+        padding: 11px 30px;
         box-shadow: rgba(17, 12, 46, 0.50) 0px 16px 30px 0px;
     }
     .container-1 .text .textForward {
@@ -489,9 +662,8 @@
 
     
     .container-1 .bg-black {
-        background-color: black;
+        background-color: white;
         width: 100%;
-        height: 114vh;
         z-index: 4;
         margin-top: 11rem;
         display: flex;
@@ -501,16 +673,19 @@
     .container-1 .bg-black .content {
         display :none;
         position: absolute;
-        margin-top: -2rem;
+       
         padding-bottom: 0;
-
     }
     .container-1 .bg-black .content.active {
         display: flex;
         flex-direction: column;
-        /*background-color: green;*/
+        background-color: black;
         width: 100%;
         top: 0;
+         margin-top: -2rem;
+         background-color: black;
+         width: 100%;
+         height: auto;
     }
 
     .container-1 .bg-black .content .image {
@@ -519,6 +694,7 @@
         overflow: hidden;
         position: absolute;
         margin-left: 0px;
+        margin-top: -2em;
     }
     .container-1 .bg-black .image img {
         object-fit: cover;
@@ -536,8 +712,8 @@
 
     .container-1 .bg-black .content .text {
         width: 80%;
-        padding-top: 20.8em;
-        padding-bottom: 5rem;
+        padding-top: 18.3em;
+        padding-bottom: 4rem;
         position: relative;
     }
     .container-1 .bg-black .content .text .title {
@@ -547,37 +723,39 @@
         animation-delay: 0.6s;
         opacity: 0;
     }
-@keyframes slideText {
-    0% {
-        opacity :0;
-        transform: translateX(-50px);
+    @keyframes slideText {
+        0% {
+            opacity :0;
+            transform: translateX(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform : translateX(0px);
+        }
     }
-    100% {
-        opacity: 1;
-        transform : translateX(0px);
-    }
-}
 
     .container-1 .bg-black .content .text .title .underline {
         background-color: white;
         width: 140px;
-        height: 4px;
+        height: 3.5px;
     }
     .container-1 .bg-black .content .text .title h2 {
         padding-left: 10px;
         color: white;
         font-family: 'Times New Roman', Times, serif;
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .container-1 .bg-black .content .text .desc {
-        /*background-color: red;*/
+       /*background-color: green;*/
+       padding-bottom: 20px;
     }
     .container-1 .bg-black .content .text .desc p {
 
         font-family: 'Times New Roman', Times, serif;
-        font-size: 17px;
-        line-height: 27px;
+        font-size: 16.5px;
+        line-height: 1.6rem;
+        letter-spacing: 0.5px;
         animation : slideDesc 0.7s ease forwards;
         animation-delay: 1.1s;
         opacity: 0;
@@ -595,40 +773,34 @@
 
     /* btn controler */
 
-    .container-1 .bg-black .button {
+    .container-1 .bg-black .content .button {
         display: flex;
         position: absolute;
-        right: 10px;
-        bottom: 20px;
-        z-index: 4;
+        bottom: 22px;
+        right:0;
     }
-    .container-1 .bg-black .button i {
+    .container-1 .bg-black  .content .button i {
         background-color: white;
         padding: 5px 15px;
         font-size: 22.5px;
         cursor: pointer;
     }
-    .container-1 .bg-black .button .nextBtn , .prevBtn {
+    .container-1 .bg-black  .content .button .nextBtn , .prevBtn {
         margin: 3px;
     }
 
     /*container 2 */
 
     .container2 {
+        z-index: 10;
         flex-direction: column;
-        padding-top: 5rem;
-        margin: auto 13px; 
+        margin: auto; 
+        padding-top: 64em;
+        position: relative;
     }
     .container2 .container-image {
-        /*background-color: red;*/
-        width: 100%;
-        height: 400px;
-     
-    }
-    .container2 .container-image .text-small {
-        position: absolute;
-        left: -10px;  
-        bottom: 45px; 
+        height: 250px;
+        width: 90%;
     }
     .container2 .container-image p {
         margin-top: 3rem;
@@ -640,43 +812,40 @@
         width: 100%;
         height: 310px;
         overflow: hidden;
-        z-index: 2;
-        position: absolute;
-       
+        z-index: 2;  
     }
     .container2 .container-image .img img {
         object-fit: cover;
-        width: 95%;
-        height: 106%;
+        width: 100%;
         position: relative;
         z-index: 2;
+        margin-top: 20px;
+        margin-left: 20px;
+   
     }
     .container2 .container-image .overlay-img {
         background-color: black;
+        width: 55%;
+        height:163px;
+        bottom: 149px;
         position: absolute;
-        width: 80%;
-        height: 200px;
-        left: -15rem;
-        bottom: 3em;
-        
+   
     }
     
     .container2 .container-text {
         display: flex;
-        flex: 0;
         flex-direction: column;
         /*background-color: red; */
-        left: 0;
-        margin-top: 1em;
-       
+        margin: 5.6em 18px 0px 18px;      
     }
     .container2 .container-text .title {
         width: 100%;
     }
     .container2 .container-text h1 {
-        font-size: 2.3em;
+        font-size: 2.1em;
         letter-spacing: 1.5px;
         line-height: 1.2em;
+        width: 100%;
     }
     .container2 .container-text .description {
         margin-top: 2em;
@@ -684,11 +853,111 @@
     }
     .container2 .container-text .description p {
         color: #575757;
-        font-size: 17px;
-        line-height: 1.5rem;
+        font-size: 16.5px;
+        line-height: 1.6rem;
         font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    .container2 .container-text .btn {
+        padding-top: 2em;
+    }
+    .container2 .container-text .btn a {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        padding: 11px 30px;
+        box-shadow: rgba(17, 12, 46, 0.50) 0px 16px 30px 0px;
     }
 
+    .container3 {
+        margin-top: 4em;
+    }
+    .container3 h1 {
+        font-size: 2.1em;
+    }
 
+    .container4 {
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        flex-wrap:wrap;
+        margin: auto;
+        margin-top: 1.7em;
+    }
+    .container4 .box {
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+        margin: 17px 20px;
+        position: relative;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 16px 30px 0px;
+    
+    }
+    .container4 .box .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .container4 .box .img  img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: .3s ease;
+    }
+    .container4 .box .detail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+        opacity: 0;
+        transition: .3s;
+    }
+    .container4 .box .detail .title {
+        text-align: center;
+        
+    }
+    .container4 .box .detail p {
+        color: white;
+        font-size: 34px;
+        text-align: center;
+        padding-top: 18px;
+    }
+    .container4 .box .detail span {
+        color:rgb(233, 233, 233);
+        font-size: 20px;
+    }
+    .container4 .box .detail .btn {
+        position: absolute;
+        bottom: 15px;
+        display: inline-block;
+        width: 80%;
+        left: 30px;
+    }
+    .container4 .box .detail a {
+        color: black;
+        text-decoration: none;
+        background-color: white;
+        padding: 10px 55px;
+        font-weight: 500;
+        border-radius :3px;
+        font-size: 18px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+       
+    }
+    .container4 .box:hover .img  img {
+        transform: scale(1.1,1.1);
+     
+    } 
+    .container4 .box .detail:hover {
+        opacity: 1;
+        visibility: visible;
+    } 
+    
 }
 
