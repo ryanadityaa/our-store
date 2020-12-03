@@ -26,6 +26,17 @@ sign.forEach(function(e) {
     });
 })
 
+// seacrh btn on desktop version
+const seacrh = document.querySelector('.content #seacrh');
+const overlay = document.querySelector('.seacrh-hiden');
+seacrh.addEventListener('click' ,()=> {
+    overlay.style.display = 'flex';
+});
+const cancelHide = document.querySelector('.seacrh-hiden #cancel-hide');
+cancelHide.addEventListener('click' , ()=> {
+   overlay.style.display = 'none';
+    //console.log('index')
+});
 
 
 
