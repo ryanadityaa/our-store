@@ -61,10 +61,10 @@ link.forEach(function(link){
 */
 
 /* slider imager banner */
-const slides = document.querySelectorAll('.content');
+const slides = document.querySelectorAll('.bg-black .content');
 const prev  = document.querySelectorAll('#prevBtn');
 const next  = document.querySelectorAll('#nextBtn');
-let index = 1 ;
+let index = 0 ;
 
 prev.forEach(function(a){
     a.addEventListener('click', function() {
@@ -80,7 +80,7 @@ next.forEach(function(a){
 
 
 function prevSlide() {
-    if (index == 1) {
+    if (index == 0) {
         index = slides.length-1;
     }
     else {
@@ -93,7 +93,7 @@ function prevSlide() {
 
 function nextSlide() {
     if (index == slides.length-1) {
-        index = 1;
+        index = 0;
     }
     else {
         index++;
